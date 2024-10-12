@@ -1,5 +1,6 @@
 package seleniumtest1;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -10,8 +11,10 @@ public class Automation_test_1 {
 	{
 		WebDriver driver=new ChromeDriver();
 		
-		driver.get("https://www.google.co.in/");
+		driver.get("https://demo.opencart.com/");
 		driver.manage().window().maximize();
+		
+		driver.findElement(By.name("search")).sendKeys("Mac");
 	}
 
 }
